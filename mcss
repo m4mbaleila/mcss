@@ -31,7 +31,8 @@ LocalScript11 = Instance.new("LocalScript")
 TextButton12 = Instance.new("TextButton")
 LocalScript13 = Instance.new("LocalScript")
 LocalScript14 = Instance.new("LocalScript")
-LocalScript15 = Instance.new("LocalScript")
+TextLabel15 = Instance.new("TextLabel")
+LocalScript16 = Instance.new("LocalScript")
 ScreenGui0.Name = "m4mbahub"
 ScreenGui0.Parent = mas
 ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -82,18 +83,21 @@ Frame4.BackgroundColor3 = Color3.new(1, 1, 1)
 Frame4.BackgroundTransparency = 1
 TextButton5.Name = "macEnable"
 TextButton5.Parent = Frame4
-TextButton5.Position = UDim2.new(0.248688191, 0, 0.313038886, 0)
-TextButton5.Size = UDim2.new(0, 137, 0, 26)
+TextButton5.Position = UDim2.new(0.248688191, 0, 0.313038766, 0)
+TextButton5.Size = UDim2.new(0, 136, 0, 26)
 TextButton5.BackgroundColor = BrickColor.new("Institutional white")
 TextButton5.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton5.Font = Enum.Font.GothamBold
 TextButton5.FontSize = Enum.FontSize.Size14
-TextButton5.Text = "ENABLE"
-TextButton5.TextColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextButton5.Text = "Enable"
+TextButton5.TextColor = BrickColor.new("Really black")
+TextButton5.TextColor3 = Color3.new(0.027451, 0.207843, 0)
 TextButton5.TextSize = 14
 LocalScript6.Parent = TextButton5
 table.insert(cors,sandbox(LocalScript6,function()
-script.Parent.MouseButton1Click:connect(function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
 	while wait(0,01) do
 		game.ReplicatedStorage.MegaClicks:FireServer()
 	end
@@ -207,8 +211,24 @@ UIS.InputChanged:Connect(function(input)
 	end
 end)
 end))
-LocalScript15.Parent = ScreenGui0
-table.insert(cors,sandbox(LocalScript15,function()
+TextLabel15.Name = "AcStatus"
+TextLabel15.Parent = Frame1
+TextLabel15.Position = UDim2.new(0, 0, 0.927576661, 0)
+TextLabel15.Size = UDim2.new(0, 276, 0, 13)
+TextLabel15.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel15.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel15.BackgroundTransparency = 1
+TextLabel15.Font = Enum.Font.Gotham
+TextLabel15.FontSize = Enum.FontSize.Size14
+TextLabel15.Text = "v.1.0.1"
+TextLabel15.TextColor = BrickColor.new("Institutional white")
+TextLabel15.TextColor3 = Color3.new(1, 1, 1)
+TextLabel15.TextScaled = true
+TextLabel15.TextSize = 14
+TextLabel15.TextWrap = true
+TextLabel15.TextWrapped = true
+LocalScript16.Parent = ScreenGui0
+table.insert(cors,sandbox(LocalScript16,function()
 local UIS = game:GetService("UserInputService") 
 local player = game:GetService("Players").LocalPlayer
 
