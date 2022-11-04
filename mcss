@@ -1,5 +1,3 @@
-
---Converted with ttyyuu12345's model to script plugin v4
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -148,26 +146,10 @@ TextButton5.TextWrapped = true
 LocalScript6.Parent = TextButton5
 table.insert(cors,sandbox(LocalScript6,function()
 local button = script.Parent
-local on = false
-
 
 button.MouseButton1Click:Connect(function()
-	if on then
-		button.Text = 'Disable'
-		button.TextColor3 = Color3.new(0.298039, 0, 0.00392157)
-		on = true
 		while wait(0,01) do
-			game.ReplicatedStorage.MegaClicks:FireServer()
-		end	
-	else
-		if on == true then
-			button.Text = 'Enable'
-			button.TextColor3 = Color3.new(0, 0.298039, 0.0509804)
-			on = false
-			while wait(999999999999) do
-				game.ReplicatedStorage.MegaClicks:FireServer()
-			end	
-		end
+		game.ReplicatedStorage.MegaClicks:FireServer()
 	end
 end)
 end))
