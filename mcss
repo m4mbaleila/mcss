@@ -1,26 +1,978 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("MAMBA HUB", "Ocean")
 
--- MAIN
-local Tab = Window:NewTab("Main")
-local MainSection = Tab:NewSection("Main")
-local Tab = Window:NewTab("AutoFarm")
-local MacSection = Tab:NewSection("Auto Clicker")
-local FheSection = Tab:NewSection("Free Hatch Eggs")
+--Converted with ttyyuu12345's model to script plugin v4
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+ScreenGui0 = Instance.new("ScreenGui")
+Frame1 = Instance.new("Frame")
+TextLabel2 = Instance.new("TextLabel")
+TextLabel3 = Instance.new("TextLabel")
+Frame4 = Instance.new("Frame")
+TextButton5 = Instance.new("TextButton")
+LocalScript6 = Instance.new("LocalScript")
+TextLabel7 = Instance.new("TextLabel")
+Frame8 = Instance.new("Frame")
+TextLabel9 = Instance.new("TextLabel")
+TextButton10 = Instance.new("TextButton")
+LocalScript11 = Instance.new("LocalScript")
+TextButton12 = Instance.new("TextButton")
+LocalScript13 = Instance.new("LocalScript")
+LocalScript14 = Instance.new("LocalScript")
+TextLabel15 = Instance.new("TextLabel")
+TextButton16 = Instance.new("TextButton")
+LocalScript17 = Instance.new("LocalScript")
+LocalScript18 = Instance.new("LocalScript")
+Frame19 = Instance.new("Frame")
+TextLabel20 = Instance.new("TextLabel")
+TextBox21 = Instance.new("TextBox")
+TextLabel22 = Instance.new("TextLabel")
+TextButton23 = Instance.new("TextButton")
+LocalScript24 = Instance.new("LocalScript")
+TextBox25 = Instance.new("TextBox")
+LocalScript26 = Instance.new("LocalScript")
+LocalScript27 = Instance.new("LocalScript")
+Frame28 = Instance.new("Frame")
+TextLabel29 = Instance.new("TextLabel")
+TextLabel30 = Instance.new("TextLabel")
+Frame31 = Instance.new("Frame")
+TextButton32 = Instance.new("TextButton")
+LocalScript33 = Instance.new("LocalScript")
+TextLabel34 = Instance.new("TextLabel")
+TextButton35 = Instance.new("TextButton")
+LocalScript36 = Instance.new("LocalScript")
+LocalScript37 = Instance.new("LocalScript")
+TextLabel38 = Instance.new("TextLabel")
+TextButton39 = Instance.new("TextButton")
+LocalScript40 = Instance.new("LocalScript")
+Frame41 = Instance.new("Frame")
+TextButton42 = Instance.new("TextButton")
+LocalScript43 = Instance.new("LocalScript")
+TextLabel44 = Instance.new("TextLabel")
+TextButton45 = Instance.new("TextButton")
+LocalScript46 = Instance.new("LocalScript")
+Frame47 = Instance.new("Frame")
+TextLabel48 = Instance.new("TextLabel")
+TextButton49 = Instance.new("TextButton")
+LocalScript50 = Instance.new("LocalScript")
+TextButton51 = Instance.new("TextButton")
+LocalScript52 = Instance.new("LocalScript")
+TextButton53 = Instance.new("TextButton")
+LocalScript54 = Instance.new("LocalScript")
+Frame55 = Instance.new("Frame")
+TextLabel56 = Instance.new("TextLabel")
+TextButton57 = Instance.new("TextButton")
+LocalScript58 = Instance.new("LocalScript")
+TextButton59 = Instance.new("TextButton")
+LocalScript60 = Instance.new("LocalScript")
+TextButton61 = Instance.new("TextButton")
+LocalScript62 = Instance.new("LocalScript")
+TextButton63 = Instance.new("TextButton")
+LocalScript64 = Instance.new("LocalScript")
+ScreenGui0.Name = "m4mbahub"
+ScreenGui0.Parent = mas
+ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui0.DisplayOrder = 1
+Frame1.Name = "MCS"
+Frame1.Parent = ScreenGui0
+Frame1.Position = UDim2.new(0.0296853818, 0, 0.337658018, 0)
+Frame1.Visible = false
+Frame1.Size = UDim2.new(0, 274, 0, 308)
+Frame1.BackgroundColor = BrickColor.new("Black")
+Frame1.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+TextLabel2.Name = "Title"
+TextLabel2.Parent = Frame1
+TextLabel2.Size = UDim2.new(0, 275, 0, 13)
+TextLabel2.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel2.BackgroundTransparency = 1
+TextLabel2.Font = Enum.Font.Gotham
+TextLabel2.FontSize = Enum.FontSize.Size14
+TextLabel2.Text = "m4mba scripts"
+TextLabel2.TextColor = BrickColor.new("Lime green")
+TextLabel2.TextColor3 = Color3.new(0.101961, 1, 0)
+TextLabel2.TextScaled = true
+TextLabel2.TextSize = 14
+TextLabel2.TextWrap = true
+TextLabel2.TextWrapped = true
+TextLabel3.Name = "Desc"
+TextLabel3.Parent = Frame1
+TextLabel3.Position = UDim2.new(0.0416187905, 0, 0.963788331, 0)
+TextLabel3.Size = UDim2.new(0, 253, 0, 13)
+TextLabel3.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel3.BackgroundTransparency = 1
+TextLabel3.Font = Enum.Font.Gotham
+TextLabel3.FontSize = Enum.FontSize.Size14
+TextLabel3.Text = "If you have problems with the script. Then write to me. m4mba#9901"
+TextLabel3.TextColor = BrickColor.new("Institutional white")
+TextLabel3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel3.TextScaled = true
+TextLabel3.TextSize = 14
+TextLabel3.TextWrap = true
+TextLabel3.TextWrapped = true
+Frame4.Name = "macFrame"
+Frame4.Parent = Frame1
+Frame4.Position = UDim2.new(0, 0, 0.0562255345, 0)
+Frame4.Size = UDim2.new(0, 276, 0, 84)
+Frame4.BackgroundColor = BrickColor.new("Institutional white")
+Frame4.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame4.BackgroundTransparency = 1
+TextButton5.Name = "macEnable"
+TextButton5.Parent = Frame4
+TextButton5.Position = UDim2.new(0.248688191, 0, 0.313038766, 0)
+TextButton5.Size = UDim2.new(0, 136, 0, 26)
+TextButton5.BackgroundColor = BrickColor.new("Institutional white")
+TextButton5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton5.Font = Enum.Font.GothamBold
+TextButton5.FontSize = Enum.FontSize.Size14
+TextButton5.Text = "Enable"
+TextButton5.TextColor = BrickColor.new("Earth green")
+TextButton5.TextColor3 = Color3.new(0, 0.298039, 0.0509804)
+TextButton5.TextScaled = true
+TextButton5.TextSize = 14
+TextButton5.TextWrap = true
+TextButton5.TextWrapped = true
+LocalScript6.Parent = TextButton5
+table.insert(cors,sandbox(LocalScript6,function()
+local button = script.Parent
+local on = false
 
-MainSection:NewSlider("WalkSpeed", "Walk Faster", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+
+button.MouseButton1Click:Connect(function()
+	if on then
+		button.Text = 'Disable'
+		button.TextColor3 = Color3.new(0.298039, 0, 0.00392157)
+		on = true
+		while wait(0,01) do
+			game.ReplicatedStorage.MegaClicks:FireServer()
+		end	
+	else
+		if on == true then
+			button.Text = 'Enable'
+			button.TextColor3 = Color3.new(0, 0.298039, 0.0509804)
+			on = false
+			while wait(999999999999) do
+				game.ReplicatedStorage.MegaClicks:FireServer()
+			end	
+		end
+	end
+end)
+end))
+TextLabel7.Name = "macTitle"
+TextLabel7.Parent = Frame4
+TextLabel7.Position = UDim2.new(0.248688191, 0, 0.0640668496, 0)
+TextLabel7.Size = UDim2.new(0, 136, 0, 21)
+TextLabel7.BackgroundColor = BrickColor.new("Black")
+TextLabel7.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextLabel7.Font = Enum.Font.Gotham
+TextLabel7.FontSize = Enum.FontSize.Size14
+TextLabel7.Text = "Mega Auto Clicker"
+TextLabel7.TextColor = BrickColor.new("Institutional white")
+TextLabel7.TextColor3 = Color3.new(1, 1, 1)
+TextLabel7.TextScaled = true
+TextLabel7.TextSize = 14
+TextLabel7.TextWrap = true
+TextLabel7.TextWrapped = true
+Frame8.Name = "fheFrame"
+Frame8.Parent = Frame1
+Frame8.Position = UDim2.new(0, 0, 0.231197774, 0)
+Frame8.Size = UDim2.new(0, 275, 0, 263)
+Frame8.BackgroundColor = BrickColor.new("Institutional white")
+Frame8.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame8.BackgroundTransparency = 1
+TextLabel9.Name = "fheTitle"
+TextLabel9.Parent = Frame8
+TextLabel9.Position = UDim2.new(0.248688191, 0, 0.0640668496, 0)
+TextLabel9.Size = UDim2.new(0, 136, 0, 21)
+TextLabel9.BackgroundColor = BrickColor.new("Black")
+TextLabel9.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextLabel9.Font = Enum.Font.Gotham
+TextLabel9.FontSize = Enum.FontSize.Size14
+TextLabel9.Text = "Free Hatch Eggs"
+TextLabel9.TextColor = BrickColor.new("Institutional white")
+TextLabel9.TextColor3 = Color3.new(1, 1, 1)
+TextLabel9.TextScaled = true
+TextLabel9.TextSize = 14
+TextLabel9.TextWrap = true
+TextLabel9.TextWrapped = true
+TextButton10.Name = "fheHE"
+TextButton10.Parent = Frame8
+TextButton10.Position = UDim2.new(0.248688191, 0, 0.14105694, 0)
+TextButton10.Size = UDim2.new(0, 137, 0, 26)
+TextButton10.BackgroundColor = BrickColor.new("Institutional white")
+TextButton10.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton10.Font = Enum.Font.GothamBold
+TextButton10.FontSize = Enum.FontSize.Size14
+TextButton10.Text = "HALLOWEEN EGG"
+TextButton10.TextColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextButton10.TextScaled = true
+TextButton10.TextSize = 14
+TextButton10.TextWrap = true
+TextButton10.TextWrapped = true
+LocalScript11.Parent = TextButton10
+table.insert(cors,sandbox(LocalScript11,function()
+script.Parent.MouseButton1Click:connect(function()
+	game.ReplicatedStorage.ServerEvents.hatchEgg:FireServer(0, workspace.EventEggs.HalloweenEgg, "Single")
+end)
+end))
+TextButton12.Name = "fheHE2"
+TextButton12.Parent = Frame8
+TextButton12.Position = UDim2.new(0.248688191, 0, 0.238918155, 0)
+TextButton12.Size = UDim2.new(0, 137, 0, 26)
+TextButton12.BackgroundColor = BrickColor.new("Institutional white")
+TextButton12.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton12.Font = Enum.Font.GothamBold
+TextButton12.FontSize = Enum.FontSize.Size14
+TextButton12.Text = "HALLOWEEN EGG 2"
+TextButton12.TextColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextButton12.TextScaled = true
+TextButton12.TextSize = 14
+TextButton12.TextWrap = true
+TextButton12.TextWrapped = true
+LocalScript13.Parent = TextButton12
+table.insert(cors,sandbox(LocalScript13,function()
+script.Parent.MouseButton1Click:connect(function()
+	game.ReplicatedStorage.ServerEvents.hatchEgg:FireServer(0, workspace.EventEggs.HalloweenEgg2, "Single")
+end)
+end))
+LocalScript14.Parent = Frame1
+table.insert(cors,sandbox(LocalScript14,function()
+local UIS = game:GetService('UserInputService')
+local frame = script.Parent
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+	local delta = input.Position - dragStart
+	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+		startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+frame.InputBegan:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+		dragToggle = true
+		dragStart = input.Position
+		startPos = frame.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragToggle = false
+			end
+		end)
+	end
 end)
 
-MacSection:NewButton("Auto Clicker Mega Click", "Turn on Auto Clicker for Mega Click with out CD", function()
- 	while wait(.1) do
- 	game.ReplicatedStorage.MegaClicks:FireServer()
+UIS.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		if dragToggle then
+			updateInput(input)
+		end
+	end
+end)
+end))
+TextLabel15.Name = "Version"
+TextLabel15.Parent = Frame1
+TextLabel15.Position = UDim2.new(0, 0, 0.927576661, 0)
+TextLabel15.Size = UDim2.new(0, 276, 0, 13)
+TextLabel15.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel15.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel15.BackgroundTransparency = 1
+TextLabel15.Font = Enum.Font.Gotham
+TextLabel15.FontSize = Enum.FontSize.Size14
+TextLabel15.Text = "v.2.2.5"
+TextLabel15.TextColor = BrickColor.new("Institutional white")
+TextLabel15.TextColor3 = Color3.new(1, 1, 1)
+TextLabel15.TextScaled = true
+TextLabel15.TextSize = 14
+TextLabel15.TextWrap = true
+TextLabel15.TextWrapped = true
+TextButton16.Name = "unhk"
+TextButton16.Parent = Frame1
+TextButton16.Position = UDim2.new(0.244525552, 0, 0.861498356, 0)
+TextButton16.Size = UDim2.new(0, 137, 0, 11)
+TextButton16.BackgroundColor = BrickColor.new("Medium brown")
+TextButton16.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+TextButton16.Font = Enum.Font.Gotham
+TextButton16.FontSize = Enum.FontSize.Size14
+TextButton16.Text = "UNHOOK"
+TextButton16.TextColor = BrickColor.new("Institutional white")
+TextButton16.TextColor3 = Color3.new(1, 1, 1)
+TextButton16.TextScaled = true
+TextButton16.TextSize = 14
+TextButton16.TextWrap = true
+TextButton16.TextWrapped = true
+LocalScript17.Parent = TextButton16
+table.insert(cors,sandbox(LocalScript17,function()
+local button = script.Parent
+
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end))
+LocalScript18.Parent = ScreenGui0
+table.insert(cors,sandbox(LocalScript18,function()
+local UIS = game:GetService("UserInputService") 
+local player = game:GetService("Players").LocalPlayer
+
+local gui = player:WaitForChild("PlayerGui"):FindFirstChild("m4mbahub") 
+
+UIS.InputBegan:Connect(function(key) 
+	if key.KeyCode == Enum.KeyCode.Insert then
+		gui.Enabled = not gui.Enabled
+	end
+end) 
+end))
+Frame19.Name = "GetKey"
+Frame19.Parent = ScreenGui0
+Frame19.Position = UDim2.new(0.404191613, 0, 0.421400607, 0)
+Frame19.Size = UDim2.new(0.191245437, 0, 0.121408708, 0)
+Frame19.BackgroundColor = BrickColor.new("Black")
+Frame19.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+TextLabel20.Name = "Title"
+TextLabel20.Parent = Frame19
+TextLabel20.Size = UDim2.new(1, 0, 0.0992366448, 0)
+TextLabel20.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel20.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel20.BackgroundTransparency = 1
+TextLabel20.Font = Enum.Font.Gotham
+TextLabel20.FontSize = Enum.FontSize.Size14
+TextLabel20.Text = "MAMBA HUB"
+TextLabel20.TextColor = BrickColor.new("Lime green")
+TextLabel20.TextColor3 = Color3.new(0.101961, 1, 0)
+TextLabel20.TextScaled = true
+TextLabel20.TextSize = 14
+TextLabel20.TextWrap = true
+TextLabel20.TextWrapped = true
+TextBox21.Name = "putcode"
+TextBox21.Parent = Frame19
+TextBox21.Position = UDim2.new(0.228882834, 0, 0.427480906, 0)
+TextBox21.Size = UDim2.new(0.544959128, 0, 0.137404576, 0)
+TextBox21.BackgroundColor = BrickColor.new("Medium brown")
+TextBox21.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+TextBox21.Font = Enum.Font.Gotham
+TextBox21.FontSize = Enum.FontSize.Size14
+TextBox21.Text = "..."
+TextBox21.TextColor = BrickColor.new("Institutional white")
+TextBox21.TextColor3 = Color3.new(1, 1, 1)
+TextBox21.TextScaled = true
+TextBox21.TextSize = 14
+TextBox21.TextWrap = true
+TextBox21.TextWrapped = true
+TextLabel22.Name = "ksstm"
+TextLabel22.Parent = Frame19
+TextLabel22.Position = UDim2.new(0, 0, 0.16666092, 0)
+TextLabel22.Size = UDim2.new(1, 0, 0.206106871, 0)
+TextLabel22.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel22.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel22.BackgroundTransparency = 1
+TextLabel22.Font = Enum.Font.SourceSans
+TextLabel22.FontSize = Enum.FontSize.Size14
+TextLabel22.Text = "Activate the key to get access to the script"
+TextLabel22.TextColor = BrickColor.new("Institutional white")
+TextLabel22.TextColor3 = Color3.new(1, 1, 1)
+TextLabel22.TextScaled = true
+TextLabel22.TextSize = 14
+TextLabel22.TextWrap = true
+TextLabel22.TextWrapped = true
+TextButton23.Name = "rdm"
+TextButton23.Parent = Frame19
+TextButton23.Position = UDim2.new(0.228882834, 0, 0.655655026, 0)
+TextButton23.Size = UDim2.new(0.544959128, 0, 0.122137405, 0)
+TextButton23.BackgroundColor = BrickColor.new("Medium brown")
+TextButton23.BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)
+TextButton23.Font = Enum.Font.Gotham
+TextButton23.FontSize = Enum.FontSize.Size14
+TextButton23.Text = "Redeem Key"
+TextButton23.TextColor = BrickColor.new("Institutional white")
+TextButton23.TextColor3 = Color3.new(1, 1, 1)
+TextButton23.TextScaled = true
+TextButton23.TextSize = 14
+TextButton23.TextWrap = true
+TextButton23.TextWrapped = true
+LocalScript24.Parent = TextButton23
+table.insert(cors,sandbox(LocalScript24,function()
+local key = script.Parent.Parent.putcode
+local getkey = script.Parent.Parent
+local mac = script.Parent.Parent.Parent.MCS
+local prl = script.Parent.Parent.Parent.PRL
+local redeem = script.Parent
+
+redeem.MouseButton1Click:Connect(function()
+	if key.Text == 'Hs8f9H*$3984HFH493hf43hfusIHf443pfh8hiusfuyir' then
+		if game.PlaceId == 11142132921 then
+			getkey.Visible = false
+			wait(0.5)
+			mac.Visible = true
+		end
+		if game.PlaceId == 155615604 then
+			getkey.Visible = false
+			wait(0.5)
+			prl.Visible = true
+		end
+	end
+end)
+end))
+TextBox25.Name = "gtk"
+TextBox25.Parent = Frame19
+TextBox25.Position = UDim2.new(0, 0, 0.890677869, 0)
+TextBox25.Size = UDim2.new(1, 0, 0.0763358772, 0)
+TextBox25.BackgroundColor = BrickColor.new("Medium brown")
+TextBox25.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+TextBox25.BackgroundTransparency = 1
+TextBox25.Font = Enum.Font.Gotham
+TextBox25.FontSize = Enum.FontSize.Size14
+TextBox25.Text = "discord.gg/729U45pJ"
+TextBox25.TextColor = BrickColor.new("Institutional white")
+TextBox25.TextColor3 = Color3.new(1, 1, 1)
+TextBox25.TextScaled = true
+TextBox25.TextSize = 14
+TextBox25.TextWrap = true
+TextBox25.TextWrapped = true
+LocalScript26.Parent = TextBox25
+table.insert(cors,sandbox(LocalScript26,function()
+script.Parent.ClearTextOnFocus = false
+end))
+LocalScript27.Name = "FalseVisible"
+LocalScript27.Parent = ScreenGui0
+table.insert(cors,sandbox(LocalScript27,function()
+script.Parent.MCS.Visible = false
+script.Parent.PRL.Visible = false
+end))
+Frame28.Name = "PRL"
+Frame28.Parent = ScreenGui0
+Frame28.Position = UDim2.new(0.0296853818, 0, 0.337658018, 0)
+Frame28.Visible = false
+Frame28.Size = UDim2.new(0, 274, 0, 308)
+Frame28.BackgroundColor = BrickColor.new("Black")
+Frame28.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+TextLabel29.Name = "Title"
+TextLabel29.Parent = Frame28
+TextLabel29.Size = UDim2.new(0, 275, 0, 13)
+TextLabel29.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel29.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel29.BackgroundTransparency = 1
+TextLabel29.Font = Enum.Font.Gotham
+TextLabel29.FontSize = Enum.FontSize.Size14
+TextLabel29.Text = "MAMBA HUB"
+TextLabel29.TextColor = BrickColor.new("Lime green")
+TextLabel29.TextColor3 = Color3.new(0.101961, 1, 0)
+TextLabel29.TextScaled = true
+TextLabel29.TextSize = 14
+TextLabel29.TextWrap = true
+TextLabel29.TextWrapped = true
+TextLabel30.Name = "Desc"
+TextLabel30.Parent = Frame28
+TextLabel30.Position = UDim2.new(0.0416187905, 0, 0.963788331, 0)
+TextLabel30.Size = UDim2.new(0, 253, 0, 13)
+TextLabel30.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel30.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel30.BackgroundTransparency = 1
+TextLabel30.Font = Enum.Font.Gotham
+TextLabel30.FontSize = Enum.FontSize.Size14
+TextLabel30.Text = "If you have problems with the script. Then write to me. m4mba#9901"
+TextLabel30.TextColor = BrickColor.new("Institutional white")
+TextLabel30.TextColor3 = Color3.new(1, 1, 1)
+TextLabel30.TextScaled = true
+TextLabel30.TextSize = 14
+TextLabel30.TextWrap = true
+TextLabel30.TextWrapped = true
+Frame31.Name = "wsFrame"
+Frame31.Parent = Frame28
+Frame31.Position = UDim2.new(0, 0, 0.0562255643, 0)
+Frame31.Size = UDim2.new(0, 276, 0, 77)
+Frame31.BackgroundColor = BrickColor.new("Institutional white")
+Frame31.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame31.BackgroundTransparency = 1
+TextButton32.Name = "ws250"
+TextButton32.Parent = Frame31
+TextButton32.Position = UDim2.new(0.248688191, 0, 0.327449769, 0)
+TextButton32.Size = UDim2.new(0, 68, 0, 26)
+TextButton32.BackgroundColor = BrickColor.new("Institutional white")
+TextButton32.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton32.Font = Enum.Font.GothamBold
+TextButton32.FontSize = Enum.FontSize.Size14
+TextButton32.Text = "250"
+TextButton32.TextColor = BrickColor.new("Earth green")
+TextButton32.TextColor3 = Color3.new(0, 0.298039, 0.0509804)
+TextButton32.TextScaled = true
+TextButton32.TextSize = 14
+TextButton32.TextWrap = true
+TextButton32.TextWrapped = true
+LocalScript33.Parent = TextButton32
+table.insert(cors,sandbox(LocalScript33,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250
+end)
+end))
+TextLabel34.Name = "wsTitle"
+TextLabel34.Parent = Frame31
+TextLabel34.Position = UDim2.new(0.248688191, 0, 0.0640668496, 0)
+TextLabel34.Size = UDim2.new(0, 136, 0, 21)
+TextLabel34.BackgroundColor = BrickColor.new("Black")
+TextLabel34.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextLabel34.LayoutOrder = 1
+TextLabel34.Font = Enum.Font.Gotham
+TextLabel34.FontSize = Enum.FontSize.Size14
+TextLabel34.Text = "WalkSpeed Changer"
+TextLabel34.TextColor = BrickColor.new("Institutional white")
+TextLabel34.TextColor3 = Color3.new(1, 1, 1)
+TextLabel34.TextScaled = true
+TextLabel34.TextSize = 14
+TextLabel34.TextWrap = true
+TextLabel34.TextWrapped = true
+TextButton35.Name = "ws16"
+TextButton35.Parent = Frame31
+TextButton35.Position = UDim2.new(0.495065004, 0, 0.340382725, 0)
+TextButton35.Size = UDim2.new(0, 68, 0, 25)
+TextButton35.BackgroundColor = BrickColor.new("Institutional white")
+TextButton35.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton35.Font = Enum.Font.GothamBold
+TextButton35.FontSize = Enum.FontSize.Size14
+TextButton35.Text = "16"
+TextButton35.TextColor = BrickColor.new("Maroon")
+TextButton35.TextColor3 = Color3.new(0.298039, 0, 0)
+TextButton35.TextScaled = true
+TextButton35.TextSize = 14
+TextButton35.TextWrap = true
+TextButton35.TextWrapped = true
+LocalScript36.Parent = TextButton35
+table.insert(cors,sandbox(LocalScript36,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+end))
+LocalScript37.Parent = Frame28
+table.insert(cors,sandbox(LocalScript37,function()
+local UIS = game:GetService('UserInputService')
+local frame = script.Parent
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+	local delta = input.Position - dragStart
+	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+		startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+frame.InputBegan:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+		dragToggle = true
+		dragStart = input.Position
+		startPos = frame.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragToggle = false
+			end
+		end)
+	end
 end)
 
-FheSection:NewButton("Halloween Egg", "Free Hatch Halloween Egg", function()
- 	game.ReplicatedStorage.ServerEvents.hatchEgg:FireServer(0, workspace.EventEggs.HalloweenEgg, "Single")
+UIS.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		if dragToggle then
+			updateInput(input)
+		end
+	end
 end)
+end))
+TextLabel38.Name = "Version"
+TextLabel38.Parent = Frame28
+TextLabel38.Position = UDim2.new(0, 0, 0.927576661, 0)
+TextLabel38.Size = UDim2.new(0, 276, 0, 13)
+TextLabel38.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel38.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel38.BackgroundTransparency = 1
+TextLabel38.Font = Enum.Font.Gotham
+TextLabel38.FontSize = Enum.FontSize.Size14
+TextLabel38.Text = "v.2.2.5"
+TextLabel38.TextColor = BrickColor.new("Institutional white")
+TextLabel38.TextColor3 = Color3.new(1, 1, 1)
+TextLabel38.TextScaled = true
+TextLabel38.TextSize = 14
+TextLabel38.TextWrap = true
+TextLabel38.TextWrapped = true
+TextButton39.Name = "unhk"
+TextButton39.Parent = Frame28
+TextButton39.Position = UDim2.new(0.244525552, 0, 0.861498356, 0)
+TextButton39.Size = UDim2.new(0, 137, 0, 11)
+TextButton39.BackgroundColor = BrickColor.new("Medium brown")
+TextButton39.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+TextButton39.Font = Enum.Font.Gotham
+TextButton39.FontSize = Enum.FontSize.Size14
+TextButton39.Text = "UNHOOK"
+TextButton39.TextColor = BrickColor.new("Institutional white")
+TextButton39.TextColor3 = Color3.new(1, 1, 1)
+TextButton39.TextScaled = true
+TextButton39.TextSize = 14
+TextButton39.TextWrap = true
+TextButton39.TextWrapped = true
+LocalScript40.Parent = TextButton39
+table.insert(cors,sandbox(LocalScript40,function()
+local button = script.Parent
 
-FheSection:NewButton("Halloween Egg 2", "Free Hatch Halloween Egg 2", function()
- 	game.ReplicatedStorage.ServerEvents.hatchEgg:FireServer(0, workspace.EventEggs.HalloweenEgg2, "Single")
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end))
+Frame41.Name = "jpFrame"
+Frame41.Parent = Frame28
+Frame41.Position = UDim2.new(0, 0, 0.221440405, 0)
+Frame41.Size = UDim2.new(0, 276, 0, 77)
+Frame41.BackgroundColor = BrickColor.new("Institutional white")
+Frame41.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame41.BackgroundTransparency = 1
+TextButton42.Name = "jp200"
+TextButton42.Parent = Frame41
+TextButton42.Position = UDim2.new(0.248688191, 0, 0.327449769, 0)
+TextButton42.Size = UDim2.new(0, 68, 0, 26)
+TextButton42.BackgroundColor = BrickColor.new("Institutional white")
+TextButton42.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton42.Font = Enum.Font.GothamBold
+TextButton42.FontSize = Enum.FontSize.Size14
+TextButton42.Text = "200"
+TextButton42.TextColor = BrickColor.new("Earth green")
+TextButton42.TextColor3 = Color3.new(0, 0.298039, 0.0509804)
+TextButton42.TextScaled = true
+TextButton42.TextSize = 14
+TextButton42.TextWrap = true
+TextButton42.TextWrapped = true
+LocalScript43.Parent = TextButton42
+table.insert(cors,sandbox(LocalScript43,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
 end)
+end))
+TextLabel44.Name = "wsTitle"
+TextLabel44.Parent = Frame41
+TextLabel44.Position = UDim2.new(0.248688191, 0, 0.0640668496, 0)
+TextLabel44.Size = UDim2.new(0, 136, 0, 21)
+TextLabel44.BackgroundColor = BrickColor.new("Black")
+TextLabel44.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextLabel44.LayoutOrder = 1
+TextLabel44.Font = Enum.Font.Gotham
+TextLabel44.FontSize = Enum.FontSize.Size14
+TextLabel44.Text = "JumpPower Changer"
+TextLabel44.TextColor = BrickColor.new("Institutional white")
+TextLabel44.TextColor3 = Color3.new(1, 1, 1)
+TextLabel44.TextScaled = true
+TextLabel44.TextSize = 14
+TextLabel44.TextWrap = true
+TextLabel44.TextWrapped = true
+TextButton45.Name = "jp50"
+TextButton45.Parent = Frame41
+TextButton45.Position = UDim2.new(0.495065004, 0, 0.340382725, 0)
+TextButton45.Size = UDim2.new(0, 68, 0, 25)
+TextButton45.BackgroundColor = BrickColor.new("Institutional white")
+TextButton45.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton45.Font = Enum.Font.GothamBold
+TextButton45.FontSize = Enum.FontSize.Size14
+TextButton45.Text = "50"
+TextButton45.TextColor = BrickColor.new("Maroon")
+TextButton45.TextColor3 = Color3.new(0.298039, 0, 0)
+TextButton45.TextScaled = true
+TextButton45.TextSize = 14
+TextButton45.TextWrap = true
+TextButton45.TextWrapped = true
+LocalScript46.Parent = TextButton45
+table.insert(cors,sandbox(LocalScript46,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+end))
+Frame47.Name = "ggFrame"
+Frame47.Parent = Frame28
+Frame47.Position = UDim2.new(0, 0, 0.387718409, 0)
+Frame47.Size = UDim2.new(0, 276, 0, 105)
+Frame47.BackgroundColor = BrickColor.new("Institutional white")
+Frame47.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame47.BackgroundTransparency = 1
+TextLabel48.Name = "wsTitle"
+TextLabel48.Parent = Frame47
+TextLabel48.Position = UDim2.new(0.0413172059, 0, 0.0640668571, 0)
+TextLabel48.Size = UDim2.new(0, 253, 0, 21)
+TextLabel48.BackgroundColor = BrickColor.new("Black")
+TextLabel48.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextLabel48.LayoutOrder = 1
+TextLabel48.Font = Enum.Font.Gotham
+TextLabel48.FontSize = Enum.FontSize.Size14
+TextLabel48.Text = "Gun Giver"
+TextLabel48.TextColor = BrickColor.new("Institutional white")
+TextLabel48.TextColor3 = Color3.new(1, 1, 1)
+TextLabel48.TextScaled = true
+TextLabel48.TextSize = 14
+TextLabel48.TextWrap = true
+TextLabel48.TextWrapped = true
+TextButton49.Name = "rmngt870"
+TextButton49.Parent = Frame47
+TextButton49.Position = UDim2.new(0.650862098, 0, 0.264192134, 0)
+TextButton49.Size = UDim2.new(0.305000007, 0, 0.238000005, 0)
+TextButton49.BackgroundColor = BrickColor.new("Institutional white")
+TextButton49.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton49.Font = Enum.Font.GothamBold
+TextButton49.FontSize = Enum.FontSize.Size14
+TextButton49.Text = "Remington 870"
+TextButton49.TextColor = BrickColor.new("Dark taupe")
+TextButton49.TextColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextButton49.TextScaled = true
+TextButton49.TextSize = 14
+TextButton49.TextWrap = true
+TextButton49.TextWrapped = true
+LocalScript50.Parent = TextButton49
+table.insert(cors,sandbox(LocalScript50,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"],ITEMPICKUP
+	local Event = game:GetService("Workspace").Remote.ItemHandler
+	Event:InvokeServer(A_1)
+end)
+end))
+TextButton51.Name = "ak47"
+TextButton51.Parent = Frame47
+TextButton51.Position = UDim2.new(0, 95, 0, 27)
+TextButton51.Size = UDim2.new(0, 84, 0, 24)
+TextButton51.BackgroundColor = BrickColor.new("Institutional white")
+TextButton51.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton51.Font = Enum.Font.GothamBold
+TextButton51.FontSize = Enum.FontSize.Size14
+TextButton51.Text = "AK-47"
+TextButton51.TextColor = BrickColor.new("Dark taupe")
+TextButton51.TextColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextButton51.TextScaled = true
+TextButton51.TextSize = 14
+TextButton51.TextWrap = true
+TextButton51.TextWrapped = true
+LocalScript52.Parent = TextButton51
+table.insert(cors,sandbox(LocalScript52,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["AK-47"],ITEMPICKUP
+	local Event = game:GetService("Workspace").Remote.ItemHandler
+	Event:InvokeServer(A_1)
+end)
+end))
+TextButton53.Name = "fal"
+TextButton53.Parent = Frame47
+TextButton53.Position = UDim2.new(0, 10, 0, 27)
+TextButton53.Size = UDim2.new(0, 84, 0, 24)
+TextButton53.BackgroundColor = BrickColor.new("Institutional white")
+TextButton53.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton53.Font = Enum.Font.GothamBold
+TextButton53.FontSize = Enum.FontSize.Size14
+TextButton53.Text = "FAL"
+TextButton53.TextColor = BrickColor.new("Dark taupe")
+TextButton53.TextColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextButton53.TextScaled = true
+TextButton53.TextSize = 14
+TextButton53.TextWrap = true
+TextButton53.TextWrapped = true
+LocalScript54.Parent = TextButton53
+table.insert(cors,sandbox(LocalScript54,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["FAL"],ITEMPICKUP
+	local Event = game:GetService("Workspace").Remote.ItemHandler
+	Event:InvokeServer(A_1)
+end)
+end))
+Frame55.Name = "opgFrame"
+Frame55.Parent = Frame28
+Frame55.Position = UDim2.new(0, 0, 0.565999985, 0)
+Frame55.Size = UDim2.new(0, 276, 0, 105)
+Frame55.BackgroundColor = BrickColor.new("Institutional white")
+Frame55.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame55.BackgroundTransparency = 1
+TextLabel56.Name = "opgTitle"
+TextLabel56.Parent = Frame55
+TextLabel56.Position = UDim2.new(0.0413172059, 0, 0.0640668571, 0)
+TextLabel56.Size = UDim2.new(0, 253, 0, 21)
+TextLabel56.BackgroundColor = BrickColor.new("Black")
+TextLabel56.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+TextLabel56.LayoutOrder = 1
+TextLabel56.Font = Enum.Font.Gotham
+TextLabel56.FontSize = Enum.FontSize.Size14
+TextLabel56.Text = "OP GUN"
+TextLabel56.TextColor = BrickColor.new("Institutional white")
+TextLabel56.TextColor3 = Color3.new(1, 1, 1)
+TextLabel56.TextScaled = true
+TextLabel56.TextSize = 14
+TextLabel56.TextWrap = true
+TextLabel56.TextWrapped = true
+TextButton57.Name = "rmngt870"
+TextButton57.Parent = Frame55
+TextButton57.Position = UDim2.new(0.650862098, 0, 0.264192134, 0)
+TextButton57.Size = UDim2.new(0.305000007, 0, 0.238000005, 0)
+TextButton57.BackgroundColor = BrickColor.new("Institutional white")
+TextButton57.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton57.Font = Enum.Font.GothamBold
+TextButton57.FontSize = Enum.FontSize.Size14
+TextButton57.Text = "Remington 870"
+TextButton57.TextColor = BrickColor.new("Dark taupe")
+TextButton57.TextColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextButton57.TextScaled = true
+TextButton57.TextSize = 14
+TextButton57.TextWrap = true
+TextButton57.TextWrapped = true
+LocalScript58.Parent = TextButton57
+table.insert(cors,sandbox(LocalScript58,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	local module = nil
+	if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Remington 870") then
+		module = require(game.GetService("Players").LocalPlayer.Backpack["Remington 870"].GunStates)
+	elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild("Remington 870") then
+		module = require(game.GetService("Players").LocalPlayer.Character["Remington 870"].GunStates)
+	end
+	if module ~= nil then
+		module["MaxAmmo"] = math.huge
+		module["CurrentAmmo"] = math.huge
+		module["StoredAmmo"] = math.huge
+		module["FireRate"] = 0.000001
+		module["Spread"] = 0
+		module["Range"] = math.huge
+		module["Bullets"] = 10
+		module["ReloadTime"] = 0.000001
+		module["AutoFire"] = true
+	end
+end)
+end))
+TextButton59.Name = "ak47"
+TextButton59.Parent = Frame55
+TextButton59.Position = UDim2.new(0, 95, 0, 27)
+TextButton59.Size = UDim2.new(0, 84, 0, 24)
+TextButton59.BackgroundColor = BrickColor.new("Institutional white")
+TextButton59.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton59.Font = Enum.Font.GothamBold
+TextButton59.FontSize = Enum.FontSize.Size14
+TextButton59.Text = "AK-47"
+TextButton59.TextColor = BrickColor.new("Dark taupe")
+TextButton59.TextColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextButton59.TextScaled = true
+TextButton59.TextSize = 14
+TextButton59.TextWrap = true
+TextButton59.TextWrapped = true
+LocalScript60.Parent = TextButton59
+table.insert(cors,sandbox(LocalScript60,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	local module = nil
+	if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("AK-47") then
+		module = require(game.GetService("Players").LocalPlayer.Backpack["AK-47"].GunStates)
+	elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild("AK-47") then
+		module = require(game.GetService("Players").LocalPlayer.Character["AK-47"].GunStates)
+	end
+	if module ~= nil then
+		module["MaxAmmo"] = math.huge
+		module["CurrentAmmo"] = math.huge
+		module["StoredAmmo"] = math.huge
+		module["FireRate"] = 0.000001
+		module["Spread"] = 0
+		module["Range"] = math.huge
+		module["Bullets"] = 10
+		module["ReloadTime"] = 0.000001
+		module["AutoFire"] = true
+	end
+end)
+end))
+TextButton61.Name = "fal"
+TextButton61.Parent = Frame55
+TextButton61.Position = UDim2.new(0, 10, 0, 27)
+TextButton61.Size = UDim2.new(0, 84, 0, 24)
+TextButton61.BackgroundColor = BrickColor.new("Institutional white")
+TextButton61.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton61.Font = Enum.Font.GothamBold
+TextButton61.FontSize = Enum.FontSize.Size14
+TextButton61.Text = "FAL"
+TextButton61.TextColor = BrickColor.new("Dark taupe")
+TextButton61.TextColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+TextButton61.TextScaled = true
+TextButton61.TextSize = 14
+TextButton61.TextWrap = true
+TextButton61.TextWrapped = true
+LocalScript62.Parent = TextButton61
+table.insert(cors,sandbox(LocalScript62,function()
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	local module = nil
+	if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("FAL") then
+		module = require(game.GetService("Players").LocalPlayer.Backpack["FAL"].GunStates)
+	elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild("FAL") then
+		module = require(game.GetService("Players").LocalPlayer.Character["FAL"].GunStates)
+	end
+	if module ~= nil then
+		module["MaxAmmo"] = math.huge
+		module["CurrentAmmo"] = math.huge
+		module["StoredAmmo"] = math.huge
+		module["FireRate"] = 0.000001
+		module["Spread"] = 0
+		module["Range"] = math.huge
+		module["Bullets"] = 10
+		module["ReloadTime"] = 0.000001
+		module["AutoFire"] = true
+	end
+end)
+end))
+TextButton63.Name = "infyld"
+TextButton63.Parent = Frame28
+TextButton63.Position = UDim2.new(0.244525552, 0, 0.803056777, 0)
+TextButton63.Visible = false
+TextButton63.Size = UDim2.new(0, 137, 0, 11)
+TextButton63.BackgroundColor = BrickColor.new("Medium brown")
+TextButton63.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+TextButton63.Font = Enum.Font.Gotham
+TextButton63.FontSize = Enum.FontSize.Size14
+TextButton63.Text = "INFINITE YIELD"
+TextButton63.TextColor = BrickColor.new("Institutional white")
+TextButton63.TextColor3 = Color3.new(1, 1, 1)
+TextButton63.TextSize = 14
+TextButton63.TextWrap = true
+TextButton63.TextWrapped = true
+LocalScript64.Parent = TextButton63
+table.insert(cors,sandbox(LocalScript64,function()
+local button = script.Parent
+
+	button.MouseButton1Click:Connect(function()
+	loadstring(game:httpget('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+end))
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
